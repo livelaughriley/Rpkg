@@ -32,7 +32,7 @@ clean:
 $(RPKG_LOCAL_LIB):
 	mkdir -p $@
 $(RPKG_LOCAL_LIB)/optparse: | $(RPKG_LOCAL_LIB)
-	Rscript -e '.libPaths("$(RPKG_LOCAL_LIB)"); install.packages("optparse")'
+	Rscript -e '.libPaths("$(RPKG_LOCAL_LIB)"); install.packages("optparse", repos="https://cloud.r-project.org")'
 $(RPKG_LOCAL_LIB)/Rpkg: package/Rpkg $(SOURCES) $(RPKG_LOCAL_LIB)/optparse | $(RPKG_LOCAL_LIB)
 	$(R_INSTALL_QUICK) -l $| $<
 

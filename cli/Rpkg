@@ -1,4 +1,4 @@
-#! Rscript --no-save
+#!/usr/bin/env Rscript --no-save
 
 get_filename_arg <- function() {
   cli_args <- commandArgs()
@@ -44,7 +44,7 @@ Commands:
         Uninstall packages. See R help for remove.packages().
 
     ( update | upgrade ) ( --all | [ PKG_NAME [ PKG_NAME ... ] ] )
-        Update packages. See R help for update.packages(). PKG_NAME is required 
+        Update packages. See R help for update.packages(). PKG_NAME is required
         if --all is not specified.
 
     reinstall PKG_NAME [ PKG_NAME ... ]
@@ -60,7 +60,7 @@ Commands:
       Print package info from the repository.
 
     search ( STRING | /REGEX/ )
-      Search for a package name in the repository. Regex is PCRE, and is 
+      Search for a package name in the repository. Regex is PCRE, and is
       case-sensitive only if it contains an upper-case character.
 
 Options:
